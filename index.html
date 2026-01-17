@@ -50,7 +50,7 @@
         
         .logo {
             padding: 15px 0;
-            margin-bottom: 10px;
+            margin-bottom: 20px;
         }
         
         .logo h1 {
@@ -59,69 +59,12 @@
             font-weight: bold;
         }
         
-        .nav-menu {
-            flex: 1;
-        }
-        
-        .nav-item {
-            display: flex;
-            align-items: center;
-            padding: 12px 20px;
-            margin: 4px 0;
-            border-radius: 30px;
-            cursor: pointer;
-            transition: all 0.2s;
-            font-size: 20px;
-            font-weight: 500;
-        }
-        
-        .nav-item:hover {
-            background-color: var(--hover-color);
-        }
-        
-        .nav-item.active {
-            color: var(--accent-blue);
-        }
-        
-        .nav-item i {
-            margin-right: 15px;
-            font-size: 24px;
-        }
-        
-        .nav-text {
-            font-size: 19px;
-        }
-        
-        /* 发帖按钮 */
-        .post-button-sidebar {
-            background-color: var(--accent-blue);
-            color: white;
-            border: none;
-            padding: 15px 0;
-            border-radius: 30px;
-            font-size: 17px;
-            font-weight: bold;
-            cursor: pointer;
-            margin: 10px 0;
-            transition: background-color 0.2s;
-        }
-        
-        .post-button-sidebar:hover {
-            background-color: #1a91da;
-        }
-        
-        .post-button-sidebar:disabled {
-            background-color: #555;
-            cursor: not-allowed;
-        }
-        
-        /* 用户信息卡片 */
+        /* 用户信息卡片 - 移到顶部 */
         .user-card {
-            margin-top: auto;
             padding: 15px;
             border-radius: 15px;
             background-color: var(--bg-sidebar);
-            margin-bottom: 15px;
+            margin-bottom: 20px;
             border: 1px solid var(--border-color);
         }
         
@@ -220,6 +163,63 @@
             cursor: not-allowed;
         }
         
+        /* 发帖按钮 - 移到用户信息下面 */
+        .post-button-sidebar {
+            background-color: var(--accent-blue);
+            color: white;
+            border: none;
+            padding: 15px 0;
+            border-radius: 30px;
+            font-size: 17px;
+            font-weight: bold;
+            cursor: pointer;
+            margin-bottom: 30px;
+            transition: background-color 0.2s;
+        }
+        
+        .post-button-sidebar:hover {
+            background-color: #1a91da;
+        }
+        
+        .post-button-sidebar:disabled {
+            background-color: #555;
+            cursor: not-allowed;
+        }
+        
+        /* 导航菜单 - 移到发帖按钮下面 */
+        .nav-menu {
+            flex: 1;
+        }
+        
+        .nav-item {
+            display: flex;
+            align-items: center;
+            padding: 12px 20px;
+            margin: 4px 0;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: all 0.2s;
+            font-size: 20px;
+            font-weight: 500;
+        }
+        
+        .nav-item:hover {
+            background-color: var(--hover-color);
+        }
+        
+        .nav-item.active {
+            color: var(--accent-blue);
+        }
+        
+        .nav-item i {
+            margin-right: 15px;
+            font-size: 24px;
+        }
+        
+        .nav-text {
+            font-size: 19px;
+        }
+        
         /* 主内容区域 */
         .main-content {
             flex: 1;
@@ -249,6 +249,94 @@
         .header-actions {
             display: flex;
             gap: 10px;
+        }
+        
+        /* 移动端顶部连接按钮 */
+        .mobile-connect-btn {
+            display: none;
+            background-color: var(--accent-blue);
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: bold;
+            cursor: pointer;
+            white-space: nowrap;
+            max-width: 150px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        
+        .mobile-connect-btn:disabled {
+            background-color: #555;
+            cursor: not-allowed;
+        }
+        
+        /* 移动端用户信息栏 */
+        .mobile-user-bar {
+            display: none;
+            padding: 12px 15px;
+            border-bottom: 1px solid var(--border-color);
+            background-color: var(--bg-card);
+        }
+        
+        .mobile-user-info {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        
+        .mobile-user-left {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            flex: 1;
+            min-width: 0;
+        }
+        
+        .mobile-avatar {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background-color: var(--accent-blue);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 16px;
+            flex-shrink: 0;
+        }
+        
+        .mobile-user-details {
+            flex: 1;
+            min-width: 0;
+        }
+        
+        .mobile-user-name {
+            font-weight: bold;
+            font-size: 14px;
+            margin-bottom: 2px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+        
+        .mobile-user-address {
+            font-size: 12px;
+            color: var(--text-secondary);
+            font-family: 'Courier New', monospace;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+        
+        .mobile-user-balance {
+            color: var(--accent-gold);
+            font-size: 14px;
+            font-weight: bold;
+            margin-left: 10px;
+            white-space: nowrap;
         }
         
         /* 右侧边栏 */
@@ -745,7 +833,7 @@
             }
         }
         
-        @media (max-width: 500px) {
+        @media (max-width: 768px) {
             body {
                 flex-direction: column;
             }
@@ -759,9 +847,10 @@
                 border-top: 1px solid var(--border-color);
                 border-right: none;
                 flex-direction: row;
-                padding: 5px;
+                padding: 5px 10px;
                 z-index: 100;
                 background-color: var(--bg-dark);
+                height: 60px;
             }
             
             .logo, .user-card, .post-button-sidebar {
@@ -772,20 +861,108 @@
                 display: flex;
                 justify-content: space-around;
                 width: 100%;
+                flex: 1;
             }
             
             .nav-item {
-                padding: 10px;
+                padding: 10px 15px;
                 margin: 0;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                width: 100%;
+            }
+            
+            .nav-item .icon {
+                margin: 0;
+                font-size: 20px;
+            }
+            
+            .nav-text {
+                display: block;
+                font-size: 12px;
+                margin-top: 4px;
             }
             
             .main-content {
-                margin-bottom: 70px;
+                margin-bottom: 60px;
                 max-width: 100%;
+                margin-top: 0;
             }
             
             .right-sidebar {
                 display: none;
+            }
+            
+            .header {
+                padding: 10px 15px;
+                position: sticky;
+                top: 0;
+                z-index: 10;
+            }
+            
+            .mobile-connect-btn {
+                display: block;
+                font-size: 12px;
+                padding: 6px 12px;
+                min-width: 80px;
+            }
+            
+            .mobile-user-bar {
+                display: block;
+                position: sticky;
+                top: 58px;
+                z-index: 9;
+            }
+            
+            .post-composer {
+                padding: 12px 15px;
+            }
+            
+            .post-item {
+                padding: 12px 15px;
+            }
+            
+            .post-author-avatar {
+                width: 40px;
+                height: 40px;
+                font-size: 16px;
+                margin-right: 10px;
+            }
+            
+            .post-actions {
+                padding-left: 50px;
+                flex-wrap: wrap;
+            }
+            
+            .action-button {
+                padding: 6px 12px;
+                font-size: 13px;
+            }
+        }
+        
+        @media (max-width: 500px) {
+            .nav-item {
+                padding: 8px 10px;
+            }
+            
+            .nav-text {
+                font-size: 11px;
+            }
+            
+            .mobile-connect-btn {
+                font-size: 11px;
+                padding: 5px 10px;
+                min-width: 70px;
+            }
+            
+            .post-actions {
+                gap: 6px;
+            }
+            
+            .action-button {
+                padding: 5px 10px;
+                font-size: 12px;
             }
         }
         
@@ -820,41 +997,134 @@
             border-radius: 8px;
             word-break: break-all;
         }
+        
+        /* 移动端右侧边栏抽屉 */
+        .mobile-right-drawer {
+            display: none;
+            position: fixed;
+            top: 0;
+            right: 0;
+            width: 90%;
+            max-width: 350px;
+            height: 100%;
+            background-color: var(--bg-dark);
+            z-index: 1000;
+            overflow-y: auto;
+            transform: translateX(100%);
+            transition: transform 0.3s ease;
+        }
+        
+        .mobile-right-drawer.active {
+            transform: translateX(0);
+        }
+        
+        .drawer-header {
+            padding: 15px;
+            border-bottom: 1px solid var(--border-color);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .drawer-close {
+            background: none;
+            border: none;
+            color: var(--text-primary);
+            font-size: 24px;
+            cursor: pointer;
+            padding: 5px;
+        }
+        
+        .drawer-content {
+            padding: 15px;
+        }
+        
+        .overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            z-index: 999;
+        }
+        
+        .overlay.active {
+            display: block;
+        }
+        
+        .mobile-more-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--text-primary);
+            font-size: 20px;
+            cursor: pointer;
+            padding: 8px;
+        }
+        
+        @media (max-width: 768px) {
+            .mobile-more-btn {
+                display: block;
+            }
+        }
     </style>
 </head>
 <body>
+    <!-- 移动端覆盖层 -->
+    <div class="overlay" id="overlay"></div>
+    
+    <!-- 移动端右侧抽屉 -->
+    <div class="mobile-right-drawer" id="mobileRightDrawer">
+        <div class="drawer-header">
+            <h3>设置和信息</h3>
+            <button class="drawer-close" id="drawerClose">✕</button>
+        </div>
+        <div class="drawer-content">
+            <!-- 用户信息卡片 -->
+            <div class="right-card">
+                <div class="right-card-title">你的身份</div>
+                <div id="mobileIdentityDisplay" class="identity-display">匿名用户#0000</div>
+                
+                <div class="right-card-title">BAIT 余额</div>
+                <div id="mobileBaitBalance" class="balance-display">0 BAIT</div>
+                
+                <div class="name-input-container">
+                    <input type="text" class="name-input" id="mobileNameInput" placeholder="设置显示名称 (最多20字符)" maxlength="20" disabled>
+                    <button class="set-name-button" id="mobileSetNameButton" disabled>设置名称</button>
+                </div>
+            </div>
+            
+            <!-- 配置状态 -->
+            <div class="right-card">
+                <div class="right-card-title">配置状态</div>
+                <div id="mobileContractConfigCheck"></div>
+                
+                <div class="contract-addresses">
+                    <div><strong>BAIT:</strong> 0xDE0CdE4306350DA70e8BA37ecBd525783fb7a93a</div>
+                    <div><strong>身份:</strong> 0x5601Af53965340746abA4f29b5E37F7c6c72387f</div>
+                    <div><strong>帖子:</strong> 0x76eCfa6cB85321728F474977760aD556FDaE5E47</div>
+                </div>
+            </div>
+            
+            <!-- 热门话题 -->
+            <div class="right-card">
+                <div class="right-card-title">热门话题</div>
+                <div style="color: var(--text-secondary); font-size: 14px; padding: 10px 0; text-align: center;">
+                    forchain 去中心化社交
+                </div>
+            </div>
+        </div>
+    </div>
+    
     <!-- 左侧导航栏 -->
     <div class="sidebar">
         <div class="logo">
             <h1>forchain</h1>
         </div>
         
-        <div class="nav-menu">
-            <div class="nav-item active">
-                <span class="icon icon-home"></span>
-                <span class="nav-text">首页</span>
-            </div>
-            <div class="nav-item">
-                <span class="icon icon-search"></span>
-                <span class="nav-text">搜索</span>
-            </div>
-            <div class="nav-item">
-                <span class="icon icon-bell"></span>
-                <span class="nav-text">通知</span>
-            </div>
-            <div class="nav-item">
-                <span class="icon icon-mail"></span>
-                <span class="nav-text">消息</span>
-            </div>
-            <div class="nav-item">
-                <span class="icon icon-user"></span>
-                <span class="nav-text">个人资料</span>
-            </div>
-        </div>
-        
-        <button class="post-button-sidebar" id="postButtonSidebar" disabled>发帖</button>
-        
-        <!-- 用户信息卡片 -->
+        <!-- 用户信息卡片 - 移到顶部 -->
         <div class="user-card">
             <div class="user-info">
                 <div class="user-avatar" id="userAvatar">U</div>
@@ -884,13 +1154,55 @@
                 <button class="connect-button" id="connectButton">连接钱包</button>
             </div>
         </div>
+        
+        <!-- 发帖按钮 - 移到用户信息下面 -->
+        <button class="post-button-sidebar" id="postButtonSidebar" disabled>发帖</button>
+        
+        <!-- 导航菜单 - 移到最下面 -->
+        <div class="nav-menu">
+            <div class="nav-item active">
+                <span class="icon icon-home"></span>
+                <span class="nav-text">首页</span>
+            </div>
+            <div class="nav-item">
+                <span class="icon icon-search"></span>
+                <span class="nav-text">搜索</span>
+            </div>
+            <button class="nav-item mobile-more-btn" id="mobileMoreBtn">
+                <span class="icon">⚙️</span>
+                <span class="nav-text">更多</span>
+            </button>
+            <div class="nav-item">
+                <span class="icon icon-bell"></span>
+                <span class="nav-text">通知</span>
+            </div>
+            <div class="nav-item">
+                <span class="icon icon-user"></span>
+                <span class="nav-text">个人资料</span>
+            </div>
+        </div>
     </div>
     
     <!-- 主内容区域 -->
     <div class="main-content">
+        <!-- 移动端用户信息栏 -->
+        <div class="mobile-user-bar" id="mobileUserBar">
+            <div class="mobile-user-info">
+                <div class="mobile-user-left">
+                    <div class="mobile-avatar" id="mobileAvatar">U</div>
+                    <div class="mobile-user-details">
+                        <div class="mobile-user-name" id="mobileUserName">未连接</div>
+                        <div class="mobile-user-address" id="mobileUserAddress">点击连接钱包</div>
+                    </div>
+                </div>
+                <div class="mobile-user-balance" id="mobileUserBalance">0 BAIT</div>
+            </div>
+        </div>
+        
         <div class="header">
             <h2>首页</h2>
             <div class="header-actions">
+                <button class="mobile-connect-btn" id="mobileConnectButton">连接钱包</button>
                 <button id="refreshButton" style="padding: 8px 16px; font-size: 14px; background: var(--accent-blue); color: white; border: none; border-radius: 20px; cursor: pointer;">刷新</button>
             </div>
         </div>
@@ -1072,15 +1384,20 @@
             
             // 模拟图标字体
             setupIcons();
+            
+            // 检查是否移动设备
+            checkMobileDevice();
         });
 
         function setupEventListeners() {
             // 按钮事件
             document.getElementById('connectButton').addEventListener('click', connectWallet);
+            document.getElementById('mobileConnectButton').addEventListener('click', connectWallet);
             document.getElementById('postButtonSidebar').addEventListener('click', () => {
                 document.getElementById('postText').focus();
             });
             document.getElementById('setNameButton').addEventListener('click', setName);
+            document.getElementById('mobileSetNameButton').addEventListener('click', setName);
             document.getElementById('postButton').addEventListener('click', handlePost);
             document.getElementById('clearPostButton').addEventListener('click', clearPost);
             document.getElementById('refreshButton').addEventListener('click', loadTimeline);
@@ -1103,6 +1420,18 @@
                 filterPosts();
             });
             
+            // 移动端抽屉功能
+            document.getElementById('mobileMoreBtn').addEventListener('click', openMobileDrawer);
+            document.getElementById('drawerClose').addEventListener('click', closeMobileDrawer);
+            document.getElementById('overlay').addEventListener('click', closeMobileDrawer);
+            
+            // 移动端用户信息栏点击连接
+            document.getElementById('mobileUserBar').addEventListener('click', function() {
+                if (!app.userAddress) {
+                    connectWallet();
+                }
+            });
+            
             // 键盘快捷键
             document.getElementById('postText').addEventListener('keydown', function(e) {
                 if (e.key === 'Enter' && e.ctrlKey) {
@@ -1119,6 +1448,13 @@
             });
             
             document.getElementById('nameInput').addEventListener('keydown', function(e) {
+                if (e.key === 'Enter') {
+                    e.preventDefault();
+                    setName();
+                }
+            });
+            
+            document.getElementById('mobileNameInput').addEventListener('keydown', function(e) {
                 if (e.key === 'Enter') {
                     e.preventDefault();
                     setName();
@@ -1149,9 +1485,29 @@
             // 如果需要真正的图标，可以引入图标字体库
         }
 
+        function checkMobileDevice() {
+            const isMobile = window.innerWidth <= 768;
+            if (isMobile) {
+                document.body.classList.add('mobile-device');
+            }
+        }
+
+        function openMobileDrawer() {
+            document.getElementById('mobileRightDrawer').classList.add('active');
+            document.getElementById('overlay').classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeMobileDrawer() {
+            document.getElementById('mobileRightDrawer').classList.remove('active');
+            document.getElementById('overlay').classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
         async function checkExistingConnection() {
             if (!window.ethereum) {
                 showError('请安装 MetaMask 钱包以使用 forchain');
+                updateMobileUIForNoWallet();
                 return;
             }
             
@@ -1284,6 +1640,7 @@
 
         async function checkBaitConfig() {
             const configDiv = document.getElementById('contractConfigCheck');
+            const mobileConfigDiv = document.getElementById('mobileContractConfigCheck');
             
             try {
                 console.log('检查 BAIT 合约配置...');
@@ -1334,6 +1691,9 @@
                 }
                 
                 configDiv.innerHTML = configHtml;
+                if (mobileConfigDiv) {
+                    mobileConfigDiv.innerHTML = configHtml;
+                }
                 
             } catch (error) {
                 console.error('检查 BAIT 配置时出错:', error);
@@ -1343,6 +1703,9 @@
                         错误: ${error.message}
                     </div>
                 `;
+                if (mobileConfigDiv) {
+                    mobileConfigDiv.innerHTML = configDiv.innerHTML;
+                }
             }
         }
 
@@ -1392,12 +1755,22 @@
         function updateWalletDisplay() {
             const walletDisplay = document.getElementById('walletDisplay');
             const connectButton = document.getElementById('connectButton');
+            const mobileConnectButton = document.getElementById('mobileConnectButton');
             const userName = document.getElementById('userName');
             const userAddress = document.getElementById('userAddress');
             const userAvatar = document.getElementById('userAvatar');
             
+            // 移动端元素
+            const mobileUserName = document.getElementById('mobileUserName');
+            const mobileUserAddress = document.getElementById('mobileUserAddress');
+            const mobileAvatar = document.getElementById('mobileAvatar');
+            const mobileUserBar = document.getElementById('mobileUserBar');
+            
             if (app.userAddress) {
                 const shortAddress = `${app.userAddress.substring(0, 6)}...${app.userAddress.substring(38)}`;
+                const avatarText = app.userAddress.substring(2, 4).toUpperCase();
+                
+                // 桌面端更新
                 walletDisplay.textContent = shortAddress;
                 walletDisplay.title = app.userAddress;
                 connectButton.textContent = '已连接';
@@ -1405,8 +1778,21 @@
                 
                 userName.textContent = '用户';
                 userAddress.textContent = shortAddress;
-                userAvatar.textContent = app.userAddress.substring(2, 4).toUpperCase();
+                userAvatar.textContent = avatarText;
+                
+                // 移动端更新
+                mobileUserName.textContent = '用户';
+                mobileUserAddress.textContent = shortAddress;
+                mobileAvatar.textContent = avatarText;
+                mobileConnectButton.textContent = shortAddress;
+                mobileConnectButton.disabled = true;
+                mobileConnectButton.style.backgroundColor = '#555';
+                
+                // 显示移动端用户信息栏
+                mobileUserBar.style.display = 'block';
+                
             } else {
+                // 桌面端重置
                 walletDisplay.textContent = '未连接钱包';
                 connectButton.textContent = '连接钱包';
                 connectButton.disabled = false;
@@ -1414,16 +1800,42 @@
                 userName.textContent = '未连接';
                 userAddress.textContent = '0x0000...0000';
                 userAvatar.textContent = 'U';
+                
+                // 移动端重置
+                mobileUserName.textContent = '未连接';
+                mobileUserAddress.textContent = '点击连接钱包';
+                mobileAvatar.textContent = 'U';
+                mobileConnectButton.textContent = '连接钱包';
+                mobileConnectButton.disabled = false;
+                mobileConnectButton.style.backgroundColor = 'var(--accent-blue)';
             }
+        }
+
+        function updateMobileUIForNoWallet() {
+            const mobileUserName = document.getElementById('mobileUserName');
+            const mobileUserAddress = document.getElementById('mobileUserAddress');
+            const mobileConnectButton = document.getElementById('mobileConnectButton');
+            
+            mobileUserName.textContent = '需要钱包';
+            mobileUserAddress.textContent = '安装MetaMask';
+            mobileConnectButton.textContent = '安装钱包';
+            mobileConnectButton.disabled = true;
+            mobileConnectButton.style.backgroundColor = '#555';
+            
+            // 显示错误信息
+            const mobileUserBar = document.getElementById('mobileUserBar');
+            mobileUserBar.style.display = 'block';
         }
 
         function enableInteraction() {
             document.getElementById('setNameButton').disabled = false;
+            document.getElementById('mobileSetNameButton').disabled = false;
             document.getElementById('postButton').disabled = false;
             document.getElementById('postButtonSidebar').disabled = false;
             document.getElementById('clearPostButton').disabled = false;
             document.getElementById('postText').disabled = false;
             document.getElementById('nameInput').disabled = false;
+            document.getElementById('mobileNameInput').disabled = false;
             document.getElementById('refreshButton').disabled = false;
             document.getElementById('replyButton').disabled = false;
             document.getElementById('repostButton').disabled = false;
@@ -1432,18 +1844,23 @@
 
         function disableInteraction() {
             document.getElementById('setNameButton').disabled = true;
+            document.getElementById('mobileSetNameButton').disabled = true;
             document.getElementById('postButton').disabled = true;
             document.getElementById('postButtonSidebar').disabled = true;
             document.getElementById('clearPostButton').disabled = true;
             document.getElementById('postText').disabled = true;
             document.getElementById('nameInput').disabled = true;
+            document.getElementById('mobileNameInput').disabled = true;
             document.getElementById('refreshButton').disabled = true;
             document.getElementById('replyButton').disabled = true;
             document.getElementById('repostButton').disabled = true;
             document.getElementById('searchInput').disabled = true;
             
             document.getElementById('identityDisplay').textContent = '匿名用户#0000';
+            document.getElementById('mobileIdentityDisplay').textContent = '匿名用户#0000';
             document.getElementById('baitBalance').textContent = '0 BAIT';
+            document.getElementById('mobileBaitBalance').textContent = '0 BAIT';
+            document.getElementById('mobileUserBalance').textContent = '0 BAIT';
         }
 
         function updatePostUI() {
@@ -1490,7 +1907,8 @@
         // ============ 用户操作 ============
         async function setName() {
             const nameInput = document.getElementById('nameInput');
-            const name = nameInput.value.trim();
+            const mobileNameInput = document.getElementById('mobileNameInput');
+            const name = nameInput.value.trim() || mobileNameInput.value.trim();
             
             if (!name) {
                 showError('请输入名称');
@@ -1505,6 +1923,7 @@
             try {
                 showLoading('正在设置身份...');
                 document.getElementById('setNameButton').disabled = true;
+                document.getElementById('mobileSetNameButton').disabled = true;
                 
                 const tx = await app.contracts.identity.setIdentity(name, {
                     gasLimit: 200000
@@ -1516,6 +1935,7 @@
                 showSuccess('身份设置成功!');
                 await loadUserData();
                 nameInput.value = '';
+                mobileNameInput.value = '';
                 
             } catch (error) {
                 console.error('设置名称错误:', error);
@@ -1523,6 +1943,7 @@
             } finally {
                 hideLoading();
                 document.getElementById('setNameButton').disabled = false;
+                document.getElementById('mobileSetNameButton').disabled = false;
             }
         }
 
@@ -1677,6 +2098,7 @@
                 if (app.contracts.identity && app.userAddress) {
                     const identity = await app.contracts.identity.getDisplayIdentity(app.userAddress);
                     document.getElementById('identityDisplay').textContent = identity;
+                    document.getElementById('mobileIdentityDisplay').textContent = identity;
                 }
                 
                 if (app.contracts.bait && app.userAddress) {
@@ -1689,7 +2111,11 @@
                     }
                     
                     const formattedBalance = ethers.utils.formatUnits(balance, decimals);
-                    document.getElementById('baitBalance').textContent = `${parseFloat(formattedBalance).toFixed(2)} BAIT`;
+                    const displayBalance = parseFloat(formattedBalance).toFixed(2);
+                    
+                    document.getElementById('baitBalance').textContent = `${displayBalance} BAIT`;
+                    document.getElementById('mobileBaitBalance').textContent = `${displayBalance} BAIT`;
+                    document.getElementById('mobileUserBalance').textContent = `${displayBalance} BAIT`;
                 }
                 
             } catch (error) {
